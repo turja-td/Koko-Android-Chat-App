@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '../models.dart';
 import '../services/call_service.dart';
@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: StreamBuilder<Map<String, ChatMeta>>(
         stream: _metas,
         builder: (context, snap) {
-          final unread = (snap.data ?? {}).values.fold<int>(0, (sum, m) => sum + m.unread);
+          final unread = (snap.data ?? {}).values.fold<int>(0, (total, m) => total + m.unread);
           return NavigationBar(
             selectedIndex: _index,
             onDestinationSelected: (i) => _pages.animateToPage(

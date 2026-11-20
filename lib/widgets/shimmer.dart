@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Moving highlight over grey placeholder shapes while content loads.
 class Shimmer extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models.dart';
@@ -268,7 +268,7 @@ class MessageBubble extends StatelessWidget {
                 ),
               );
             },
-            errorBuilder: (_, __, ___) => const SizedBox(
+            errorBuilder: (_, _, _) => const SizedBox(
               width: 240,
               height: 120,
               child: Icon(Icons.broken_image_rounded),

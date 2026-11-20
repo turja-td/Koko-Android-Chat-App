@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'avatar.dart';
 
@@ -22,7 +22,7 @@ class PulsingAvatar extends StatelessWidget {
       height: 230,
       child: AnimatedBuilder(
         animation: animation,
-        builder: (_, __) => Stack(
+        builder: (_, _) => Stack(
           alignment: Alignment.center,
           children: [
             if (active)

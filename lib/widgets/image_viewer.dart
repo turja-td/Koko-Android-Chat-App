@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class ImageViewer extends StatelessWidget {
   const ImageViewer({super.key, required this.url, required this.heroTag});

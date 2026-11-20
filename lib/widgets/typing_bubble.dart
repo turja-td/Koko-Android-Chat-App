@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Three bouncing dots, shown while the other person is typing.
 class TypingBubble extends StatefulWidget {
@@ -36,7 +36,7 @@ class _TypingBubbleState extends State<TypingBubble> with SingleTickerProviderSt
       ),
       child: AnimatedBuilder(
         animation: _c,
-        builder: (_, __) => Row(
+        builder: (_, _) => Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             for (var i = 0; i < 3; i++)

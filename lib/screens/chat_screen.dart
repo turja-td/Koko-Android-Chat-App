@@ -3,7 +3,7 @@ import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -505,13 +505,13 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
                     bottom: 12,
                     child: ValueListenableBuilder<bool>(
                       valueListenable: _showJump,
-                      builder: (_, show, __) => AnimatedScale(
+                      builder: (_, show, _) => AnimatedScale(
                         scale: show ? 1 : 0,
                         duration: const Duration(milliseconds: 220),
                         curve: Curves.easeOutBack,
                         child: ValueListenableBuilder<int>(
                           valueListenable: _newCount,
-                          builder: (_, n, __) => Badge(
+                          builder: (_, n, _) => Badge(
                             isLabelVisible: n > 0,
                             label: Text('$n'),
                             child: FloatingActionButton.small(
